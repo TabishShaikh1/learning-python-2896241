@@ -6,14 +6,38 @@
 
 
 def main():
-    x, y = 10, 100
+    x, y = 1000, 100
 
     # conditional flow uses if, elif, else
+    if x < y:
+        result = "x is less then y"
+    elif x == y:
+        result = "x is equal to y"
+    else:
+        result = "x is greater than y"
 
+    print(result)    
     # conditional statements let you use "a if C else b"
-
+    result = "x is less than y" if x < y else "x is greater than y"
+    print(result)
     # match-case makes it easy to compare multiple values
-    value = "one"
+    value = "three"
+    match value:
+        case "one":
+            result = 1
+        case "two":
+            result = 2                
+        case "three" | "four":
+            result = (3,4)
+            # Tupil of 3 and 4     
+        case _:
+            result = -1
+            #Default case    
+            # 
+    print(result)  
+
+
+
 
 if __name__ == "__main__":
     main()

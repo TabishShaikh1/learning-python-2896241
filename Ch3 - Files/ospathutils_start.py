@@ -12,13 +12,14 @@ import time
 
 def main():
     # Print the name of the OS
-
+    print(os.name)
     
     # Check for item existence and type
-
+    print("Item exists", str(path.exists("textfile.txt")))
     
     # Work with file paths
-
+    print("Items path", path.realpath("textfile.txt"))
+    print("path and file name: ", path.split(path.realpath("textfile.txt")))
     
     # Get the modification time
 
